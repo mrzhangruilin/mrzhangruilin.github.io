@@ -418,7 +418,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">18</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -426,7 +426,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">13</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">14</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -458,7 +458,7 @@
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">18</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -466,7 +466,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">13</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">14</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -481,6 +481,85 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2026/03/27/note/development/linux/sshd/">
+                            sshd配置
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            问题1报错Privilege separation user sshd does not exest
+系统中缺少权限分离的sshd用户
+在/etc/passwd中添加一条：
+1sshd:x:103:104:SSH drop priv user:/var/empty:/bin/false
+
+理论上参考chrony配置问题，直接创建新的用户也行：
+1adduser -r -s /sbin/nol...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Mar 27 2026 10:32:38 GMT+0800">
+                
+                    2026-03-27
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/linux/">linux</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/sshd/">sshd</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2026/03/27/note/development/linux/sshd/">阅读全文<span class="seo-reader-text">sshd配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -727,7 +806,7 @@ Qu...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 13 篇文章
+                        共撰写了 14 篇文章
                     </span>
                     
                 </p>
