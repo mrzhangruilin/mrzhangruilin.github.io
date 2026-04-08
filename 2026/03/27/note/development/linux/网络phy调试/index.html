@@ -387,7 +387,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -395,7 +395,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -506,29 +506,18 @@
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<p>按照如下步骤检查、调试</p>
-<ol>
-<li><p>检查REGOUT引脚输出电平，一般phy芯片需要1V或1.8V的一个参考电平，可能是内部LDO，也可能是外部输入，如果是内部LDO，检查该引脚是否有正确电平输出，如果是外部输入，确保电平正常</p>
-</li>
-<li><p>检查晶振是否起振</p>
-</li>
-<li><p>如果参考电平正常，晶振起振，则可以认为PHY芯片开始工作了，此时检查MDC MDIO链路</p>
-</li>
-<li><p>dmesg | grep mdio，如果有提示addr (n) missing等问题，则配置在该地址上的phy芯片无法正常连接<br>此时检查mdc mdio链路，是否上拉，是否连接正常，phy芯片地址配置是否正常，设备树中phy芯片地址是否正确</p>
-</li>
-<li><p>mdc mdio配置正常后，phy芯片正常工作，应当能读取到phy芯片的寄存器，此时ifconfig ethx up应当正常</p>
-</li>
-<li><p>可以使用mii-disg、phytool、ethtool等工具读取phy芯片寄存器，同时检查phy芯片驱动是否编译</p>
-</li>
-<li><p>dmesg | grep mac如果有No phy found报错，应该是mdio总线读取不到设备</p>
-</li>
-<li><p>dmesg | grep mac如果有No such device报错，应该是设备树配置出错，GPIO冲突，此时驱动probe失败</p>
-</li>
-<li><p>能识别到phy芯片后，如果ifconfig中只有TX packets，没有RX packets，则考虑phy芯片到MAC的链路问题<br>考虑MII、RMII、RGMII、QSGMII的连接是否正常，示波器测是否有波形</p>
-</li>
-<li><p>MII、RMII、RGMII、QSGMII如果没有波形，考虑是否接反，phy芯片的RXN RXP是输出引脚，TXN TXP是输入引脚<br>RXN RXP TXN TXP都是对MAC而言，而不是相对phy芯片而言。<br>IP101、YT8614等芯片都是如此</p>
-</li>
-<li><p>如果插拔网线，PHY芯片无法识别到物理链路链接，10M&#x2F;100M&#x2F;1G协商，则考虑PHY和变压器、网口的连接是否正常、正确</p>
-</li>
+<ol type="1">
+<li><p>检查REGOUT引脚输出电平，一般phy芯片需要1V或1.8V的一个参考电平，可能是内部LDO，也可能是外部输入，如果是内部LDO，检查该引脚是否有正确电平输出，如果是外部输入，确保电平正常</p></li>
+<li><p>检查晶振是否起振</p></li>
+<li><p>如果参考电平正常，晶振起振，则可以认为PHY芯片开始工作了，此时检查MDC MDIO链路</p></li>
+<li><p>dmesg | grep mdio，如果有提示addr (n) missing等问题，则配置在该地址上的phy芯片无法正常连接 此时检查mdc mdio链路，是否上拉，是否连接正常，phy芯片地址配置是否正常，设备树中phy芯片地址是否正确</p></li>
+<li><p>mdc mdio配置正常后，phy芯片正常工作，应当能读取到phy芯片的寄存器，此时ifconfig ethx up应当正常</p></li>
+<li><p>可以使用mii-disg、phytool、ethtool等工具读取phy芯片寄存器，同时检查phy芯片驱动是否编译</p></li>
+<li><p>dmesg | grep mac如果有No phy found报错，应该是mdio总线读取不到设备</p></li>
+<li><p>dmesg | grep mac如果有No such device报错，应该是设备树配置出错，GPIO冲突，此时驱动probe失败</p></li>
+<li><p>能识别到phy芯片后，如果ifconfig中只有TX packets，没有RX packets，则考虑phy芯片到MAC的链路问题 考虑MII、RMII、RGMII、QSGMII的连接是否正常，示波器测是否有波形</p></li>
+<li><p>MII、RMII、RGMII、QSGMII如果没有波形，考虑是否接反，phy芯片的RXN RXP是输出引脚，TXN TXP是输入引脚 RXN RXP TXN TXP都是对MAC而言，而不是相对phy芯片而言。 IP101、YT8614等芯片都是如此</p></li>
+<li><p>如果插拔网线，PHY芯片无法识别到物理链路链接，10M/100M/1G协商，则考虑PHY和变压器、网口的连接是否正常、正确</p></li>
 </ol>
 
 		</div>
@@ -620,7 +609,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 16 篇文章
+                        共撰写了 17 篇文章
                     </span>
                     
                 </p>

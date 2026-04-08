@@ -387,7 +387,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -395,7 +395,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -475,11 +475,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/linux/">linux</a>&nbsp;
+                        <a href="/tags/i2c/">i2c</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/i2c/">i2c</a>&nbsp;
+                        | <a href="/tags/linux/">linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -507,12 +507,7 @@
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">i2c_msg</span> <span class="title">ioctl_msg</span>[1];</span></span><br><span class="line"></span><br><span class="line">ioctl_msg[<span class="number">0</span>].addr = <span class="number">0x27</span>;</span><br><span class="line">ioctl_msg[<span class="number">0</span>].flags = I2C_M_RD;</span><br><span class="line">ioctl_msg[<span class="number">0</span>].len = <span class="number">1</span>;</span><br><span class="line">ioctl_msg[<span class="number">0</span>].buf = read_reg;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">i2c_rdwr_ioctl_data</span> <span class="title">ioctl_data</span>;</span></span><br><span class="line">ioctl_data.nmsgs = <span class="number">1</span>;</span><br><span class="line">ioctl_data.msgs = ioctl_msg;</span><br><span class="line">ioctl(fd, I2C_RDWR, &amp;ioctl_data);</span><br></pre></td></tr></table></figure></div>
 <p>每个<code>ioctl_msg</code>都会发送1次启动信号、从机地址，ioctl_data可以一次性处理多个<code>ioctl_msg</code></p>
-<p>在<code>i2c_msg</code>中：</p>
-<ul>
-<li>addr：从机地址</li>
-<li>flags：0为写入，I2C_M_RD是读</li>
-<li>len：数据长度</li>
-</ul>
+<p>在<code>i2c_msg</code>中： - addr：从机地址 - flags：0为写入，I2C_M_RD是读 - len：数据长度</p>
 
 		</div>
 
@@ -522,11 +517,11 @@
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/linux/">#linux</a>&nbsp;
+				<a href="/tags/i2c/">#i2c</a>&nbsp;
 			</li>
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/i2c/">#i2c</a>&nbsp;
+				<a href="/tags/linux/">#linux</a>&nbsp;
 			</li>
 			
 		</ul>
@@ -603,7 +598,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 16 篇文章
+                        共撰写了 17 篇文章
                     </span>
                     
                 </p>

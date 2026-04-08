@@ -388,7 +388,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -396,7 +396,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -476,7 +476,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/i2c/">i2c</a>&nbsp;
+                        <a href="/tags/chip/">chip</a>&nbsp;
                     </li>
                 
                     <li>
@@ -484,7 +484,7 @@
                     </li>
                 
                     <li>
-                        | <a href="/tags/chip/">chip</a>&nbsp;
+                        | <a href="/tags/i2c/">i2c</a>&nbsp;
                     </li>
                 
             </ul>
@@ -510,18 +510,9 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p>CH455通讯没有从机地址，其通讯协议不是标准的i2c协议。<br>但其通讯基本可以遵循i2c协议通讯。</p>
-<p>读写时序为：启动信号-字节1-应答-字节2-应答-停止信号</p>
-<ul>
-<li>字节1<ul>
-<li>设置系统参数 48H</li>
-<li>加载字数据 68H、6AH、6CH、6EH</li>
-<li>读取按键 4FH</li>
-</ul>
-</li>
-<li>字节2<br> 写入或读出的数据</li>
-</ul>
-<p>根据CH455读写时序，其可以兼容i2c协议。<br>将命令字（字节1）当做从机地址发送，其中设置系统参数、加载字数据的第0位都是0，刚好符合i2c的写时序；而读取按键（4FH）的第0位为1，符合i2c的读时序。</p>
+			<p>CH455通讯没有从机地址，其通讯协议不是标准的i2c协议。 但其通讯基本可以遵循i2c协议通讯。</p>
+<p>读写时序为：启动信号-字节1-应答-字节2-应答-停止信号 - 字节1 - 设置系统参数 48H - 加载字数据 68H、6AH、6CH、6EH - 读取按键 4FH - 字节2 写入或读出的数据</p>
+<p>根据CH455读写时序，其可以兼容i2c协议。 将命令字（字节1）当做从机地址发送，其中设置系统参数、加载字数据的第0位都是0，刚好符合i2c的写时序；而读取按键（4FH）的第0位为1，符合i2c的读时序。</p>
 
 		</div>
 
@@ -531,7 +522,7 @@
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/i2c/">#i2c</a>&nbsp;
+				<a href="/tags/chip/">#chip</a>&nbsp;
 			</li>
 			
 			<li class="tag-item mx-0.5">
@@ -539,7 +530,7 @@
 			</li>
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/chip/">#chip</a>&nbsp;
+				<a href="/tags/i2c/">#i2c</a>&nbsp;
 			</li>
 			
 		</ul>
@@ -616,7 +607,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 16 篇文章
+                        共撰写了 17 篇文章
                     </span>
                     
                 </p>
