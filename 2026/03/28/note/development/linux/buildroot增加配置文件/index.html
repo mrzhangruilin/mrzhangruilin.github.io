@@ -94,7 +94,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2026-03-28T08:56:30.407Z">
-<meta property="article:modified_time" content="2026-03-28T10:16:54.344Z">
+<meta property="article:modified_time" content="2026-04-12T11:16:15.194Z">
 <meta property="article:author" content="Dai Zu">
 <meta property="article:tag" content="buildroot">
 <meta name="twitter:card" content="summary">
@@ -386,15 +386,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -445,8 +445,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2026-03-28 18:16:54</span>
-            <span class="mobile">2026-03-28 18:16:54</span>
+            <span class="desktop">2026-04-12 19:16:15</span>
+            <span class="mobile">2026-04-12 19:16:15</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -509,7 +509,16 @@
 <h3 id="添加定制内容">添加定制内容</h3>
 <p>以根文件系统的/etc/profie为例，Buildroot系统中终端没有主机名、当前路径和用户显示，创建修改/etc/profile文件，如下：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;/bin:/sbin:/usr/bin:/usr/sbin&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$PS1</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;`id -u`&quot;</span> -eq 0 ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">export</span> PS1=<span class="string">&#x27;\u@\h:\w# &#x27;</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">export</span> PS1=<span class="string">&#x27;\u@\h:\w$ &#x27;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> EDITOR=<span class="string">&#x27;/bin/vi&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Source configuration files from /etc/profile.d</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> /etc/profile.d/*.sh ; <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ -r <span class="string">&quot;<span class="variable">$i</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        . <span class="variable">$i</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">unset</span> i</span><br></pre></td></tr></table></figure></div>
-<p>其中的<code>export PS1='\u@\h:\w# '</code> + u：代表当前登录用户的用户名 + @：分隔用户名和主机名 + h：代表主机名 + ：：分隔主机名和工作目录 + w：当前用户的工作目录的完整路径 + #：当前用户是超级用户root + $：代表普通用户</p>
+<p>其中的<code>export PS1='\u@\h:\w# '</code></p>
+<ul>
+<li>u：代表当前登录用户的用户名</li>
+<li>@：分隔用户名和主机名</li>
+<li>h：代表主机名</li>
+<li>：：分隔主机名和工作目录</li>
+<li>w：当前用户的工作目录的完整路径</li>
+<li>#：当前用户是超级用户root</li>
+<li>$：代表普通用户</li>
+</ul>
 <p>board/nts_4u/main/目录则对应根文件系统的根目录/，main目录下的文件会添加、覆盖到根文件系统的根目录，所以main/etc/profile会覆盖根文件系统的/etc/profile</p>
 <h3 id="配置buildroot开启overlay">配置buildroot开启overlay</h3>
 <p>在Buildroot菜单中找到System configutation -&gt; Root filesystem overlay directories，将其配置成board/nts_4u/main/</p>
@@ -601,7 +610,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 17 篇文章
+                        共撰写了 20 篇文章
                     </span>
                     
                 </p>

@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2026/04/08/note/circuit/%E5%B8%82%E7%94%B5%E9%A2%91%E7%8E%87%E6%B5%8B%E9%87%8F/</loc>
+    <loc>http://example.com/2026/04/12/%E5%B8%88%E5%A4%A7%E5%AE%9E%E9%AA%8C%E5%AE%A4/%E5%AE%9E%E9%AA%8C%E5%AE%A4FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,43 @@
   <url>
     <loc>http://example.com/2026/03/27/note/development/chip/AD9767/</loc>
     
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2026/03/27/note/development/chip/CH455/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2026/03/28/note/development/linux/buildroot%E5%A2%9E%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2026/03/27/note/development/linux/i2c%E8%AF%BB%E5%86%99/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2026/04/12/note/circuit/%E9%A9%B1%E5%8A%A8%E5%AE%B9%E6%80%A7%E8%B4%9F%E8%BD%BD/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +58,34 @@
   <url>
     <loc>http://example.com/2026/04/07/tutorial/AD/AD%E4%B8%80%E4%BA%9B%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9/</loc>
     
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2026/03/27/note/development/chip/NCA9555/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2026/04/12/note/development/code/%E5%AE%98%E6%96%B9DAP%20link%E7%83%A7%E5%BD%95%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E5%A4%8D%E4%BD%8DMCU/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2026/04/08/note/circuit/%E5%B8%82%E7%94%B5%E9%A2%91%E7%8E%87%E6%B5%8B%E9%87%8F/</loc>
+    
+    <lastmod>2026-04-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -41,15 +104,6 @@
     <loc>http://example.com/2026/03/27/note/unclassified/%E5%B8%B8%E7%94%A8NTP%20IP/</loc>
     
     <lastmod>2026-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2026/03/28/note/development/linux/buildroot%E5%A2%9E%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
-    
-    <lastmod>2026-03-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -75,33 +129,6 @@
   
   <url>
     <loc>http://example.com/2026/03/27/note/unclassified/SOP%E5%B0%81%E8%A3%85/</loc>
-    
-    <lastmod>2026-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2026/03/27/note/development/chip/NCA9555/</loc>
-    
-    <lastmod>2026-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2026/03/27/note/development/chip/CH455/</loc>
-    
-    <lastmod>2026-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2026/03/27/note/development/linux/i2c%E8%AF%BB%E5%86%99/</loc>
     
     <lastmod>2026-03-27</lastmod>
     
@@ -175,155 +202,169 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://example.com/tags/circuit/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>http://example.com/tags/FTP/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/hexo/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/SOP%E5%B0%81%E8%A3%85/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/chip/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/NTP/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/buildroot/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/AD/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/i2c/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>http://example.com/tags/circuit/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/linux/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>http://example.com/tags/SOP%E5%B0%81%E8%A3%85/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/chrony/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/sshd/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/MAC/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/a40i/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/phy/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>http://example.com/tags/chip/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/AD9767/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/DAC/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/CH455/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/i2c/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/NTP/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/HAL/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/I2C/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/code/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/DAP/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/NCA9555/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/buildroot/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/chrony/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/linux/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/MAC/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/a40i/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/phy/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/sshd/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -331,15 +372,22 @@
 
   
   <url>
-    <loc>http://example.com/categories/note/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>http://example.com/categories/%E5%B8%88%E5%A4%A7%E5%AE%9E%E9%AA%8C%E5%AE%A4/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/tutorial/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/note/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
