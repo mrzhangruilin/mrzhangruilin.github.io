@@ -1,3 +1,5 @@
+http://example.com/2026/04/17/tutorial/DAPlink/%E8%87%AA%E5%88%B6DAPlink/
+http://example.com/2026/04/14/note/development/chip/ADF4351/
 http://example.com/2026/04/13/note/development/code/%E9%87%8D%E5%AE%9A%E5%90%91printf/
 http://example.com/2026/04/12/%E5%B8%88%E5%A4%A7%E5%AE%9E%E9%AA%8C%E5%AE%A4/%E5%AE%9E%E9%AA%8C%E5%AE%A4FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/
 http://example.com/2026/03/28/note/development/linux/buildroot%E5%A2%9E%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/
@@ -45,6 +47,9 @@ http://example.com/tags/code/
 http://example.com/tags/NCA9555/
 http://example.com/tags/DAP/
 http://example.com/tags/FTP/
+http://example.com/tags/ADF4351/
+http://example.com/tags/PLL/
+http://example.com/tags/DAP-Link/
 http://example.com/categories/note/
 http://example.com/categories/tutorial/
 http://example.com/categories/%E5%B8%88%E5%A4%A7%E5%AE%9E%E9%AA%8C%E5%AE%A4/
