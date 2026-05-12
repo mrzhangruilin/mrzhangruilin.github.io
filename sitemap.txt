@@ -1,3 +1,4 @@
+http://example.com/2026/05/12/note/%E6%97%A0%E7%BA%BF%E9%80%9A%E4%BF%A1/3%E6%8E%A5%E6%94%B6%E6%9C%BA%E5%AE%9E%E9%AA%8C/
 http://example.com/2026/04/14/note/development/chip/ADF4351/
 http://example.com/2026/04/20/note/unclassified/%E5%AE%89%E8%B7%AFJTAG%E7%94%B5%E8%B7%AF/
 http://example.com/2026/03/27/note/unclassified/%E5%B8%B8%E7%94%A8NTP%20IP/
