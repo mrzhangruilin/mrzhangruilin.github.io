@@ -5,6 +5,14 @@
     <lastmod>2026-10-31</lastmod>
   </url>
   <url>
+    <loc>http://example.com//private/:title/</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2026/10/31/note/%E9%87%8D%E9%A2%91%E9%94%81%E5%AE%9A/%E9%87%8D%E9%A2%91%E9%94%81%E5%AE%9A%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2026/04/17/tutorial/DAPlink/%E8%87%AA%E5%88%B6DAPlink/</loc>
     <lastmod>2026-07-08</lastmod>
   </url>
@@ -41,10 +49,6 @@
     <lastmod>2026-04-17</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2026/04/17/note/%E6%97%A0%E7%BA%BF%E9%80%9A%E4%BF%A1/1%E5%A4%A9%E7%BA%BF%E4%B8%8E%E6%BB%A4%E6%B3%A2%E5%99%A8/</loc>
-    <lastmod>2026-04-17</lastmod>
-  </url>
-  <url>
     <loc>http://example.com/2026/04/13/note/development/code/%E9%87%8D%E5%AE%9A%E5%90%91printf/</loc>
     <lastmod>2026-04-13</lastmod>
   </url>
@@ -53,15 +57,15 @@
     <lastmod>2026-04-12</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2026/03/27/note/development/chip/CH455/</loc>
-    <lastmod>2026-04-12</lastmod>
-  </url>
-  <url>
     <loc>http://example.com/2026/03/28/note/development/linux/buildroot%E5%A2%9E%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2026-04-12</lastmod>
   </url>
   <url>
     <loc>http://example.com/2026/03/27/note/development/linux/i2c%E8%AF%BB%E5%86%99/</loc>
+    <lastmod>2026-04-12</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2026/03/27/note/development/chip/CH455/</loc>
     <lastmod>2026-04-12</lastmod>
   </url>
   <url>
