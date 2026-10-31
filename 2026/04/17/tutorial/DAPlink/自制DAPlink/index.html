@@ -94,7 +94,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2026-04-17T01:20:19.877Z">
-<meta property="article:modified_time" content="2026-06-14T11:05:44.438Z">
+<meta property="article:modified_time" content="2026-07-08T12:04:21.344Z">
 <meta property="article:author" content="Dai Zu">
 <meta property="article:tag" content="DAP Link">
 <meta name="twitter:card" content="summary">
@@ -445,8 +445,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2026-06-14 19:05:44</span>
-            <span class="mobile">2026-06-14 19:05:44</span>
+            <span class="desktop">2026-07-08 20:04:21</span>
+            <span class="mobile">2026-07-08 20:04:21</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -663,6 +663,26 @@
                 ></p>
 <p>使用<code>tools\generate_flash_algo.py</code>生成blob文件，这在<code>tools</code>目录下生成一个<code>target_blob.c</code>，将它拷贝到<code>source/family/st/stm32f103rc/</code>中。</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\generate_flash_algo.py <span class="string">&quot;C:\Program Files (x86)\Keil\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\Flash\STM32F10x_512.FLM&quot;</span> --pack-path <span class="string">&quot;C:\Program Files (x86)\Keil\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1&quot;</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="引脚覆盖"><code>引脚覆盖</code></h2>
+<p>对于不同的 DAP 可能需要有不同的引脚配置。</p>
+<p>在 <code>records/board/xxx.yaml</code> 中，可以添加如下配置，<code>macros</code> 中的配置最后会变成 keil 的全局宏定义。<code>includes</code> 中可以是文件夹也可以是文件，这会被添加到头文件包含目录。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="image-9.png"
+                      
+                ></p>
+<p>接下来找到 <code>source/hic_hal/stm32/stm32f103xb/IO_config.h</code> 或其它 hic 的 IO_config.h 文件，将头部的宏定义改成如下，这是参考了其它板子的代码。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="image-10.png"
+                      
+                ></p>
+<p>复制一份对应的 hic 的 IO_config.h 到 <code>source/board/override_xxx/</code> 目录下，根据板子需求修改对应的引脚配置即可。</p>
+<h2 id="u盘文件名修改"><code>U盘文件名修改</code></h2>
+<p>在 <code>source/board/xxx.c</code> 文件中，<code>daplink_drive_name</code> 允许被自由定义，但一定要保证长度为 11 字节，注意不是小于，而是等于，如果小于 11 字节应该用空格补充完整，否则可能出现问题。</p>
+<p>参考 <code>docs/customization.md</code> 可以修改：USB 描述符等字符串。</p>
 <h2 id="生成工程">生成工程</h2>
 <p>所有文件生成后，生成keil工程</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">progen generate -f projects.yaml -p stm32f103xb_stm32f103rc_if -t uvision</span><br></pre></td></tr></table></figure></div>
@@ -735,7 +755,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">自制DAP Link</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97"><span class="nav-text">1.开发指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE"><span class="nav-text">设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-text">激活虚拟环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#build"><span class="nav-text">build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91mdk%E5%B7%A5%E7%A8%8B"><span class="nav-text">编译MDK工程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#stm32f103xb_bl"><span class="nav-text">stm32f103xb_bl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stm32f103xb_if"><span class="nav-text">stm32f103xb_if</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">2.自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%84%9A%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">引脚自定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uart%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">UART自定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE"><span class="nav-text">原理图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#usb"><span class="nav-text">USB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swd"><span class="nav-text">SWD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nreset"><span class="nav-text">nRESET</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uart"><span class="nav-text">UART</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%B6%E6%8C%AF"><span class="nav-text">晶振</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%9B%BA%E4%BB%B6%E7%9A%84swd"><span class="nav-text">用于下载固件的SWD</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A0%E6%B3%95software%E5%A4%8D%E4%BD%8Dmcu"><span class="nav-text">3.无法software复位MCU</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%96%E6%8B%BD%E4%B8%8B%E8%BD%BD"><span class="nav-text">4.拖拽下载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#projects.yaml"><span class="nav-text">projects.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32f103rc.yaml"><span class="nav-text">stm32f103rc.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32f103rc.c"><span class="nav-text">stm32f103rc.c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#target.c"><span class="nav-text">target.c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flash_blob.c"><span class="nav-text">flash_blob.c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%B7%A5%E7%A8%8B"><span class="nav-text">生成工程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9Atarget%E6%8B%96%E6%8B%BD%E7%83%A7%E5%BD%95%E6%94%AF%E6%8C%81"><span class="nav-text">5.多Target拖拽烧录支持</span></a></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97"><span class="nav-text">1.开发指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE"><span class="nav-text">设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-text">激活虚拟环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#build"><span class="nav-text">build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91mdk%E5%B7%A5%E7%A8%8B"><span class="nav-text">编译MDK工程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#stm32f103xb_bl"><span class="nav-text">stm32f103xb_bl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stm32f103xb_if"><span class="nav-text">stm32f103xb_if</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">2.自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%84%9A%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">引脚自定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uart%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">UART自定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE"><span class="nav-text">原理图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#usb"><span class="nav-text">USB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swd"><span class="nav-text">SWD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nreset"><span class="nav-text">nRESET</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uart"><span class="nav-text">UART</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%B6%E6%8C%AF"><span class="nav-text">晶振</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%9B%BA%E4%BB%B6%E7%9A%84swd"><span class="nav-text">用于下载固件的SWD</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A0%E6%B3%95software%E5%A4%8D%E4%BD%8Dmcu"><span class="nav-text">3.无法software复位MCU</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%96%E6%8B%BD%E4%B8%8B%E8%BD%BD"><span class="nav-text">4.拖拽下载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#projects.yaml"><span class="nav-text">projects.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32f103rc.yaml"><span class="nav-text">stm32f103rc.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32f103rc.c"><span class="nav-text">stm32f103rc.c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#target.c"><span class="nav-text">target.c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flash_blob.c"><span class="nav-text">flash_blob.c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%84%9A%E8%A6%86%E7%9B%96"><span class="nav-text">引脚覆盖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u%E7%9B%98%E6%96%87%E4%BB%B6%E5%90%8D%E4%BF%AE%E6%94%B9"><span class="nav-text">U盘文件名修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%B7%A5%E7%A8%8B"><span class="nav-text">生成工程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9Atarget%E6%8B%96%E6%8B%BD%E7%83%A7%E5%BD%95%E6%94%AF%E6%8C%81"><span class="nav-text">5.多Target拖拽烧录支持</span></a></li></ol>
 
 	</div>
 </div>
